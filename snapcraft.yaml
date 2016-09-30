@@ -1,8 +1,9 @@
 name: openhab
-version: "2.0.0.b4-1"
-summary: openhab 2.0 smart home server
+version: "2.0.0.b4-1-offline"
+summary: openhab 2.0 smart home server, offline versions
 description: |
  openHAB - a vendor and technology agnostic open source automation software for your home.
+ offline version has all officially supported modules bundled
 
 confinement: strict
 grade: devel
