@@ -7,7 +7,7 @@ description: |
  offline version has all officially supported modules bundled
 
 confinement: strict
-grade: devel
+grade: stable
 
 apps:
     openhab:
