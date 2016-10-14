@@ -57,9 +57,9 @@ parts:
 
     # java run time
     jre:
-        source: .
-        plugin: dump
+        plugin: nil
         stage-packages: [openjdk-8-jre]
+        build-packages: [openjdk-8-jre-headless]
         filesets:
           binaries:
             - -lib
@@ -82,10 +82,4 @@ parts:
         plugin: dump
         organize:
             openhab-control: bin/openhab-control
-
-    # helper script to cponnect interfaces
-    connect-interfaces:
-        source: .
-        plugin: dump
-        organize:
             connect-interfaces: bin/connect-interfaces
