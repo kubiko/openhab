@@ -55,20 +55,21 @@ parts:
           - -runtime/karaf/bin/*.bat
 
     # java run time
-    jre:
-        plugin: nil
-        stage-packages: [openjdk-8-jre]
+    jre-zulu:
+        plugin: dump
+        source: http://cdn.azul.com/zulu-embedded/bin/ezdk-1.8.0_91-8.14.0.6-linux_aarch32.tar.gz
         filesets:
           binaries:
+            - -bin
+            - -demo
+            - -include
             - -lib
-            - -var
-            - -usr/include
-            - -usr/lib/gcc
-            - -usr/lib/ssl
-            - -usr/lib/X11
-            - -usr/lib/*-linux-gnu/
-            - -usr/sbin
-            - -usr/shared
+            - -man
+            - -sample
+            - -src.zip
+            - -jre/lib/aarch32/client/libjvm.diz
+            - -openhab-control
+            - -connect-interfaces
         stage:
           - $binaries
         snap:
